@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#111319" />
+  <meta name="description" content="TJ Blechman's interactive game-style portfolio." />
+  <title>TJ Blechman — Interactive Portfolio</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="boot" class="boot-screen">
+    <div class="boot-card">
+      <div class="boot-kicker">TJ BLECHMAN PRESENTS</div>
+      <h1>TJ'S WORLD</h1>
+      <p>An interactive portfolio you can actually walk through.</p>
+      <div class="boot-progress"><span id="bootBar"></span></div>
+      <div id="bootText" class="boot-text">Drawing the city...</div>
+      <button id="startBtn" class="pixel-btn hidden">ENTER WORLD</button>
+      <div class="boot-help">WASD / ARROWS · E or SPACE to interact · touch controls on mobile</div>
+    </div>
+  </div>
+
+  <main id="app" class="app-shell" aria-label="TJ's interactive portfolio">
+    <canvas id="game" width="960" height="540" aria-label="Top-down interactive portfolio world"></canvas>
+
+    <div class="scanlines" aria-hidden="true"></div>
+    <header class="hud top-hud">
+      <div class="brand-chip"><span class="brand-dot"></span><strong>TJ'S WORLD</strong><span class="version">v0.1</span></div>
+      <nav class="quick-nav" aria-label="Quick navigation">
+        <button data-jump="about">ABOUT</button>
+        <button data-jump="projects">PROJECTS</button>
+        <button data-jump="skills">SKILLS</button>
+        <button data-jump="contact">CONTACT</button>
+      </nav>
+    </header>
+
+    <aside class="hud quest-card">
+      <div class="quest-label">CURRENT QUEST</div>
+      <div id="questText" class="quest-title">Explore the neighborhood</div>
+      <div id="questMeta" class="quest-meta">0 / 6 landmarks visited</div>
+    </aside>
+
+    <aside class="hud minimap-card">
+      <canvas id="minimap" width="176" height="120"></canvas>
+      <div class="minimap-label">CITY MAP</div>
+    </aside>
+
+    <div id="interaction" class="interaction hidden">
+      <span class="keycap">E</span>
+      <span id="interactionText">INTERACT</span>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+
+    <div id="mobileControls" class="mobile-controls" aria-hidden="true">
+      <div id="stickBase" class="stick-base"><div id="stickKnob" class="stick-knob"></div></div>
+      <button id="mobileInteract" class="mobile-action">E</button>
+    </div>
+  </main>
+
+  <div id="modalBackdrop" class="modal-backdrop hidden"></div>
+  <section id="modal" class="portfolio-modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button id="modalClose" class="modal-close" aria-label="Close">×</button>
+    <div id="modalEyebrow" class="modal-eyebrow">LANDMARK</div>
+    <h2 id="modalTitle">Title</h2>
+    <div id="modalBody"></div>
+  </section>
+
+  <template id="projectCardTemplate">
+    <article class="project-card">
+      <div class="project-icon"></div>
+      <div>
+        <h3></h3>
+        <p></p>
+        <div class="project-tags"></div>
+      </div>
+    </article>
+  </template>
+
+  <script src="game.js" defer></script>
+</body>
+</html>
