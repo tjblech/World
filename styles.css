@@ -105,3 +105,24 @@ button:focus-visible { outline: 3px solid var(--accent-2); outline-offset: 2px; 
   .interaction { bottom: 20px; }
   .minimap-card { top: 70px; transform: scale(.82); transform-origin: top right; }
 }
+
+/* V2 additions */
+.location-chip {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  font-size: 9px;
+  font-weight: 950;
+  letter-spacing: .15em;
+  color: #929bad;
+  border-left: 1px solid rgba(255,255,255,.13);
+  border-right: 1px solid rgba(255,255,255,.13);
+  padding: 4px 13px;
+  white-space: nowrap;
+}
+.brand-chip strong { white-space: nowrap; }
+.toast { max-width: min(620px, calc(100vw - 30px)); text-align: center; line-height: 1.35; }
+@media (max-width: 1040px) {
+  .location-chip { display:none; }
+}
