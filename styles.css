@@ -126,3 +126,41 @@ button:focus-visible { outline: 3px solid var(--accent-2); outline-offset: 2px; 
 @media (max-width: 1040px) {
   .location-chip { display:none; }
 }
+
+
+/* V3 — art / atmosphere pass */
+.world-status {
+  position: absolute;
+  right: 12px;
+  bottom: -26px;
+  padding: 5px 8px;
+  border: 1px solid rgba(255,255,255,.13);
+  background: rgba(12,15,20,.82);
+  color: #8893a7;
+  font-size: 8px;
+  font-weight: 950;
+  letter-spacing: .14em;
+  pointer-events: none;
+}
+.top-hud { overflow: visible; }
+.world-cleared .quest-card {
+  box-shadow: 0 0 0 1px rgba(245,184,61,.45), 0 0 28px rgba(245,184,61,.15), 5px 7px 0 rgba(0,0,0,.48);
+}
+.world-cleared .quest-label { color: #ffe094; }
+.world-cleared .brand-dot { box-shadow: 0 0 12px rgba(245,184,61,.75); background: #f5b83d; }
+.boot-card {
+  background:
+    linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px),
+    #11151c;
+  background-size: 18px 18px;
+}
+.portfolio-modal { background:
+  radial-gradient(circle at 75% 0%, rgba(238,188,83,.09), transparent 28%),
+  #f3ead6; }
+.project-card { transition: transform .14s ease, box-shadow .14s ease; }
+.project-card:hover { transform: translate(-2px,-2px); box-shadow: 7px 7px 0 #171a20; }
+
+@media (max-width: 1040px) {
+  .world-status { display:none; }
+}

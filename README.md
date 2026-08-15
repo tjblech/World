@@ -1,17 +1,24 @@
-# TJ's World — v2
+# TJ's World — V3
 
-A no-build, game-style personal portfolio prototype.
+A no-build, game-style portfolio prototype built with plain HTML/CSS/Canvas JS.
 
-## V2
-- Real walkable interiors for all six landmarks
-- Distinct exterior architecture and denser city dressing
-- Wandering NPCs
-- Day/night toggle (`N`) with working streetlights
-- Playable billiards mini-game inside Billiards Hall
-- Improved player sprite and authored environment details
-- Existing landmarks, hidden chips, quick navigation, minimap, PWA support, and mobile controls retained
+## V3 highlights
+
+- First serious environment/art pass
+- Denser streets: paving, alleys, bike racks, fencing, utility poles, manholes, signs
+- More distinctive landmark facades and night signage
+- Improved player / NPC / vehicle pixel art and animation
+- Camera look-ahead while walking
+- Dynamic district names in the HUD
+- Rain toggle (`R`) with window/rain effects
+- Night toggle (`N`) retained and improved
+- Projects Arcade now has four separate interactive cabinets
+- More detailed and animated interiors
+- Full-exploration + hidden-chip “WORLD CLEAR” state
+- Existing billiards mini-game, interiors, mobile controls, minimap, PWA support
 
 ## Run locally
+
 From this folder:
 
 ```bash
@@ -21,10 +28,10 @@ python -m http.server 8000
 Then open `http://localhost:8000`.
 
 ## Controls
-- **WASD / Arrow keys** — move
-- **E / Space** — interact
-- **Esc** — exit a room / close modal / leave billiards
-- **N** — toggle day/night while outside
-- **Billiards:** mouse to aim + click to shoot, or arrows to aim/change power and Space to shoot
 
-No build step or dependencies are required.
+- Move: WASD / Arrow keys
+- Interact: E / Space
+- Night: N
+- Rain: R
+- Close modal / leave pool: Esc
+- Pool: mouse aim + click, or arrow keys + Space
