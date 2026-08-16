@@ -1,37 +1,39 @@
-# TJ's World — V3
+# TJ's World — V4
 
-A no-build, game-style portfolio prototype built with plain HTML/CSS/Canvas JS.
+A no-build, game-style portfolio prototype built with plain HTML/CSS/Canvas JavaScript.
 
-## V3 highlights
+## V4 — District Alive
 
-- First serious environment/art pass
-- Denser streets: paving, alleys, bike racks, fencing, utility poles, manholes, signs
-- More distinctive landmark facades and night signage
-- Improved player / NPC / vehicle pixel art and animation
-- Camera look-ahead while walking
-- Dynamic district names in the HUD
-- Rain toggle (`R`) with window/rain effects
-- Night toggle (`N`) retained and improved
-- Projects Arcade now has four separate interactive cabinets
-- More detailed and animated interiors
-- Full-exploration + hidden-chip “WORLD CLEAR” state
-- Existing billiards mini-game, interiors, mobile controls, minimap, PWA support
+- Four **playable project cabinets** inside Projects Arcade:
+  - Minesweeper Roguelike mini-board
+  - Coinworks timing/production demo
+  - SkyLab scanner
+  - CityLab signal map
+- Generated WebAudio sound effects with `M` mute toggle (no audio assets required)
+- Animated tree sway, drifting leaves, rainy puddles, river reflections, and a moving boat
+- New night-market side area with optional personal-content booth
+- Hidden riverside terminal and mystery vending machine
+- Five persistent achievement badges
+- `P` photo mode hides the HUD for clean screenshots
+- More animated interior props: record player, servo rig, arcade screens, light pools
+- Existing night/rain systems, six walkable interiors, pool mini-game, mobile controls, PWA support, minimap, and hidden chips retained
 
 ## Run locally
-
-From this folder:
 
 ```bash
 python -m http.server 8000
 ```
 
-Then open `http://localhost:8000`.
+Open `http://localhost:8000`.
 
 ## Controls
 
 - Move: WASD / Arrow keys
-- Interact: E / Space
+- Interact / arcade action: E / Space
+- Minesweeper flag: F
 - Night: N
 - Rain: R
-- Close modal / leave pool: Esc
+- Sound: M
+- Photo mode: P
+- Exit mini-game / interior / modal: Esc
 - Pool: mouse aim + click, or arrow keys + Space

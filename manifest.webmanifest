@@ -1,5 +1,5 @@
 {
-  "name": "TJ's World \u2014 Interactive Portfolio V3",
+  "name": "TJ's World \u2014 Interactive Portfolio V4",
   "short_name": "TJ's World",
   "start_url": "./",
   "display": "standalone",
@@ -17,5 +17,5 @@
       "type": "image/png"
     }
   ],
-  "description": "TJ Blechman's interactive game-style portfolio."
+  "description": "TJ Blechman's interactive game-style portfolio, V4 District Alive."
 }
